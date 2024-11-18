@@ -5,7 +5,7 @@ import unicodedata
 from turtle import Pen, Screen
 
 PKG_PATH = Path(__file__).parent
-SCR = Screen()
+screen = Screen()
 
 emojis = (
     # Unicode emojis de animais
@@ -118,8 +118,8 @@ class Animal:
     def _load_img(self):
         cwd: str = os.getcwd()
         os.chdir(PKG_PATH/'images'/'72')
-        SCR.register_shape(self._left_shape)
-        SCR.register_shape(self._right_shape)
+        screen.register_shape(self._left_shape)
+        screen.register_shape(self._right_shape)
         os.chdir(cwd)
         self.left()
 
